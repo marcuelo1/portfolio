@@ -1,0 +1,104 @@
+<div class="first-page-background"></div>
+<div class="first-page-background-container">
+    <div class="first-page-title">WELCOME</div>
+    <div class="first-page-arrow">
+        <a href="#about">
+            <div class="round">
+                <div id="cta">
+                    <span class="arrow primera next "></span>
+                    <span class="arrow segunda next "></span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div id="about" class='second-page-background'>
+    <div class="container">
+        <div class="second-page-image-container">
+            <div class="second-page-image"></div>
+        </div>
+        <div class="second-page-about-me">
+            <%= @about_me.html_safe %>
+        </div>
+
+        <center>
+            <hr width='75%'>
+        </center>
+
+        <div class="row" style='margin-top: 15px;'>
+            <div class="col">
+                <div class="second-page-skills">
+                    <div>SKILLS</div>
+                    <ul>
+                        <% @skills.each do |skill| %>
+                            <li><%= skill %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="second-page-languages">
+                    <div>LANGUAGES</div>
+                    <ul>
+                        <% @languages.each do |language| %>
+                            <li><%= language %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="project-title">PROJECTS</div>
+        <ul class="projects-list">
+            <% @projects.each do |project| %>
+                <li>
+                    <div class="card">
+                        <div class="card-header">image</div>
+                        <div class="card-body">description</div>
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+
+        <br>
+        <br>
+
+        <div class="interested-caption">
+            Let's start a project, just click <a href="#contact">here</a>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="third-page-background">
+    <div class="container">
+        <div class="contact-title">Contact Details</div>
+        <br>
+        <div class="contact-details">
+            <div class="contact-details-title">Email Address</div>
+            <div class="contact-details-content"><%= @email %></div>
+            <br>
+            <div class="contact-details-title">Phone Number</div>
+            <div class="contact-details-content"><%= @mobile_number %></div>
+            <br>
+            <div class="contact-details-title">Address</div>
+            <div class="contact-details-content"><%= @address %></div>
+        </div>
+        <br>
+        <br>
+        <div class="contact-title">Contact Me Now!</div>
+        <br>
+        <%= form_with(url: "localhost", method: 'post') do |f| %>
+            <%= f.text_field :name, class: 'form-control contact-input-text', placeholder: 'Name' %>
+            <br>
+            <%= f.text_field :email, class: 'form-control contact-input-text', placeholder: 'Email' %>
+            <br>
+            <%= f.text_area :description, class: 'form-control contact-input-textarea', placeholder: 'Description' %>
+            <br>
+            <center>
+                <%= f.submit 'Send' %>
+            </center>
+        <% end %>
+    </div>
+</div>
