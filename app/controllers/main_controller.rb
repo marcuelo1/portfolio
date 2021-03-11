@@ -1,6 +1,7 @@
 class MainController < ApplicationController
+    
     def home
-        @about_me = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo tempore? Est a odit, modi sed assumenda eius nihil, voluptates voluptatem, consequatur incidunt reiciendis velit laudantium reprehenderit ducimus quo facere?"
+        @about_me = current_admin.about_me
 
         @skills = ['Teamplayer', 'Initiative', 'Leader', 'Fun', 'Fast Learner']
 
