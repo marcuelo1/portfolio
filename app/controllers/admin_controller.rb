@@ -10,11 +10,11 @@ class AdminController < ApplicationController
 
         @projects = ['Great Wall Builders', '1', '2', '3', '4', '5', '6']
 
-        @email = "marcuelo1@gmail.com"
+        @email = current_admin.display_email
 
-        @mobile_number = "09053536495"
+        @mobile_number = current_admin.mobile_number
 
-        @address = "Canduman, Mandaue City, Cebu"
+        @address = current_admin.address
     end
 
     def update_about_me
@@ -45,5 +45,10 @@ class AdminController < ApplicationController
         redirect_to home_admin_path
     end
     
+    def update_contact_details
+        @admin = current_admin
+        @admin.update(display_email: params[:display_email], mobile_number: params[:mobile_number], address: params[:address])
+        redirect_to home_admin_path
+    end
     
 end

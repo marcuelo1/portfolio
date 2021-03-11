@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # Admin
   get 'admin', to: 'admin#index', as: 'home_admin'
   put 'update/about_me', to: 'admin#update_about_me'
+  put 'update/contact_details', to: 'admin#update_contact_details'
   post 'add/skills_languages', to: 'admin#add_skills_languages'
 end

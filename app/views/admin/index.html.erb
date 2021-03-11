@@ -1,77 +1,99 @@
-<div class="container" style='padding: 20px;'>
-    <h3>
-        <%= link_to "Sign Out", destroy_admin_session_path(current_admin), :method => :delete %>
-    </h3>
-    <h1>About Me</h1>
+<div class="admin-panel-container">
+    <div class="row">
+        <div class="col">
+            <h1>ADMIN CONTROL PANEL</h1>
+        </div>
+        <div class="col" style='text-align: right;'>
+            <h3>
+                <%= link_to "Sign Out", destroy_admin_session_path(current_admin), :method => :delete, class: 'btn btn-outline-light' %>
+            </h3>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>About Me</h3>
     <div class="admin-about-me">
         <%= form_with(url: "#{root_url}update/about_me", method: 'post') do |f| %>
             <%= f.hidden_field :_method, value: 'put' %>
 
             <%= f.text_area :about_me, value: @about_me, class: 'form-control' %>
             <br>
-            <%= f.submit 'Save' %>
+            <%= f.submit 'Save', class: 'btn btn-outline-light' %>
         <% end %>
     </div>
 
     <hr>
 
-    <h1>Skills and Languages</h1>
     <h3>Skills</h3>
-    <%= form_with(url: "#{root_url}add/skills_languages", method: 'post') do |f| %>
-        <%= f.text_field :skill, class: 'form-control' %>
-        <br>
-        <%= f.submit 'Add' %>
-    <% end %>
-    <ul>
-        <% @skills.each do |skill| %>
-            <li>
-                <%= skill %>
-            </li>
+    <div class="admin-skills">
+        <%= form_with(url: "#{root_url}add/skills_languages", method: 'post') do |f| %>
+            <%= f.text_field :skill, class: 'form-control' %>
+            <br>
+            <%= f.submit 'Add', class: 'btn btn-outline-light' %>
         <% end %>
-    </ul>
+        <br>
+        <ul>
+            <% @skills.each do |skill| %>
+                <li>
+                    <%= skill %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <hr>
+    
     <h3>Languages</h3>
-    <%= form_with(url: "#{root_url}add/skills_languages", method: 'post') do |f| %>
-        <%= f.text_field :language, class: 'form-control' %>
+    <div class="admin-languages">
+        <%= form_with(url: "#{root_url}add/skills_languages", method: 'post') do |f| %>
+            <%= f.text_field :language, class: 'form-control' %>
+            <br>
+            <%= f.submit 'Add', class: 'btn btn-outline-light' %>
+        <% end %>
         <br>
-        <%= f.submit 'Add' %>
-    <% end %>
-    <ul>
-        <% @languages.each do |language| %>
-            <li>
-                <%= language %>
-            </li>
-        <% end %>
-    </ul>
+        <ul>
+            <% @languages.each do |language| %>
+                <li>
+                    <%= language %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
 
     <hr>
 
-    <h1>Projects</h1>
-    <a href="/add/project" class="add-button">Add Project</a>
-    <ul>
-        <% @projects.each do |project| %>
-            <li>
-                <a href=""> <%= project %> </a>
-            </li>
-        <% end %>
-    </ul>
+    <h3>Projects</h3>
+    <div class="admin-projects">
+        <a href="/add/project" class="btn btn-outline-light">Add Project</a>
+        <br>
+        <br>
+        <ul>
+            <% @projects.each do |project| %>
+                <li>
+                    <a href=""> <%= project %> </a>
+                </li>
+            <% end %>
+        </ul>
+    </div>
 
     <hr>
 
-    <h1>Contact Details</h1>
-    <a href="/add/contact" class="add-button">Add Contact Details</a>
+    <h3>Contact Details</h3>
     <div class="admin-contact-details">
-        <div class="row">
-            <div class="col">
-                Email Address <br>
-                Phone Number <br>
-                Address <br>
-            </div>
-
-            <div class="col">
-                <%= @email %> <br>
-                <%= @mobile_number %> <br>
-                <%= @address %>
-            </div>
-        </div>
+        <%= form_with(url: "#{root_url}update/contact_details", method: 'post') do |f| %>
+            <%= f.hidden_field :_method, value: 'put' %>
+            
+            <%= f.label :display_email, "Email Address" %>
+            <%= f.text_field :display_email, value: @email, class: 'form-control' %>
+            <br>
+            <%= f.label :mobile_number, "Phone Number" %>
+            <%= f.text_field :mobile_number, value: @mobile_number, class: 'form-control' %>
+            <br>
+            <%= f.label :address, "Address" %>
+            <%= f.text_field :address, value: @address, class: 'form-control' %>
+            <br>
+            <%= f.submit 'Save', class: 'btn btn-outline-light' %>
+        <% end %>
     </div>
 </div>

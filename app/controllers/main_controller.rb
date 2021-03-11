@@ -3,16 +3,16 @@ class MainController < ApplicationController
     def home
         @about_me = current_admin.about_me
 
-        @skills = ['Teamplayer', 'Initiative', 'Leader', 'Fun', 'Fast Learner']
+        @skills = current_admin.skills
 
-        @languages = ['Ruby', 'Javascript', 'Jquery', 'Rails']
+        @languages = current_admin.languages
 
         @projects = ['Great Wall Builders', '1', '2', '3', '4', '5', '6']
 
-        @email = "marcuelo1@gmail.com"
+        @email = current_admin.display_email
 
-        @mobile_number = "09053536495"
+        @mobile_number = current_admin.mobile_number
 
-        @address = "Canduman, Mandaue City, Cebu"
+        @address = current_admin.address
     end
 end

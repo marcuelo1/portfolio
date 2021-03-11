@@ -1,3 +1,96 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.login-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    background-color: #0f0f0f;
+}
+
+.login-container {
+    margin: auto;
+    width: 500px;
+}
+
+.admin-panel-container h3 {
+    margin-bottom: 20px;
+}
+
+.admin-about-me form {
+    textarea {
+        resize: none;
+        height: 300px;
+    }
+
+    input[type=submit] {
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+.admin-panel-container {
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #0f0f0f;
+    color: #eaeaea;
+}
+
+.admin-skills, .admin-languages {
+    form {
+        display: flex;
+
+        input[type=text] {
+            width: 200px;
+        }
+
+        input[type=submit] {
+            margin-left: 30px;
+            width: 80px;
+            font-size: 20px;
+        }
+    }
+
+    ul {
+        width: 500px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+}
+
+.admin-projects {
+    ul {
+        width: 1000px;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+
+        li a {
+            color: #eaeaea;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+
+    a {
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+.admin-contact-details form {
+    input[type=text] {
+        width: 500px;
+    }
+
+    input[type=submit] {
+        width: 80px;
+        font-size: 20px;
+    }
+}
