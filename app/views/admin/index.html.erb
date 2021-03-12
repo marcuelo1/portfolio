@@ -36,7 +36,10 @@
         <ul>
             <% @skills.each do |skill| %>
                 <li>
-                    <%= skill %>
+                    <span>
+                        <%= skill %>
+                        <a href='/delete/skills/<%= skill %>' data-method='delete'>✕</a>
+                    </span>
                 </li>
             <% end %>
         </ul>
@@ -55,7 +58,10 @@
         <ul>
             <% @languages.each do |language| %>
                 <li>
-                    <%= language %>
+                    <span>
+                        <%= language %>
+                        <a href='/delete/languages/<%= language %>' data-method='delete'>✕</a>
+                    </span>
                 </li>
             <% end %>
         </ul>

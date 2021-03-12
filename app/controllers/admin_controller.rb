@@ -50,5 +50,27 @@ class AdminController < ApplicationController
         @admin.update(display_email: params[:display_email], mobile_number: params[:mobile_number], address: params[:address])
         redirect_to home_admin_path
     end
+
+    def delete_skill
+        admin = current_admin
+        skill_array = admin.skills
+
+        skill_array.delete(params[:skill])
+
+        admin.update(skills: skill_array)
+
+        redirect_to home_admin_path
+    end
+
+    def delete_language
+        admin = current_admin
+        language_array = admin.languages
+
+        language_array.delete(params[:language])
+
+        admin.update(languages: language_array)
+
+        redirect_to home_admin_path
+    end
     
 end

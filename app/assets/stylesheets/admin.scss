@@ -57,10 +57,16 @@
     }
 
     ul {
-        width: 500px;
+        width: 600px;
         columns: 3;
         -webkit-columns: 3;
         -moz-columns: 3;
+        
+        li a {
+            margin-left: 10px; 
+            color: red; 
+            text-decoration: none;
+        }
     }
 }
 
