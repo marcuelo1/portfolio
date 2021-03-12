@@ -19,7 +19,9 @@
             <div class="second-page-image"></div>
         </div>
         <div class="second-page-about-me">
-            <%= @about_me.html_safe %>
+            <% if @about_me %>
+                <%= @about_me.html_safe %>
+            <% end %>
         </div>
 
         <center>
