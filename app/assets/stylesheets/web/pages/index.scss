@@ -1,0 +1,184 @@
+#web-pages-index {
+  #welcome-section, #about-section, #services-section, #contact-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #welcome-section {
+    .bg {
+      position: absolute;
+      z-index: -10;
+      width: inherit;
+      height: inherit;
+      background-image: url("bg-home.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      z-index: -9;
+      width: inherit;
+      height: inherit;
+      background-color: rgba(0,0,0,0.8)
+    }
+
+    .text-container  {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+
+      .reg-text, .name-text {
+        text-align: center;
+      }
+
+      .image {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+
+        img {
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+          border: 5px solid #eaeaea;
+          object-fit: cover;
+        }
+      }
+
+      .name-text {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .social-media {
+        margin-top: 50px;
+
+        i {
+          margin: auto 20px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  #about-section {
+    .image-container {
+      width: 50%;
+      height: inherit;
+      position: relative;
+
+      img {
+        height: 90vh;
+        object-fit: cover;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .text-container {
+      width: 50%;
+      height: inherit;
+      padding: 15vh 20vh 20vh 0;
+
+      h1 {
+        font-weight: bold;
+      }
+
+      table {
+        tr {
+          height: 40px;
+
+          td:nth-child(1) {
+            width: 125px;
+          }
+        }
+      }
+    }
+  }
+
+  #services-section {
+    background-color: #eaeaea;
+    padding: 15vh 5vw;
+
+    h1 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .d-flex {
+      margin-top: 40px;
+
+      .card {
+        width: 300px;
+        padding: 40px 20px;
+
+        .card-body {
+          padding: 0;
+
+          .icon-container  {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: auto;
+            background-color: #eaeaea;
+
+            i {
+              font-size: 30px;
+              width: fit-content;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .h5 {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+          }
+
+          .text {
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  #contact-section {
+    .bg {
+      position: absolute;
+      z-index: -10;
+      width: inherit;
+      height: inherit;
+      background-image: url("contact-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      z-index: -9;
+      width: inherit;
+      height: inherit;
+      background-color: rgba(0,0,0,0.5)
+    }
+
+    .card {
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

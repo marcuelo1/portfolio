@@ -1,0 +1,50 @@
+nav {
+  position: fixed !important;
+  background-color: rgba(10, 10, 10, 0);
+  width: 100%;
+  z-index: 99999;
+
+  padding: 5px 3% 5px 3% !important;
+
+  .navbar-brand {
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  .d-flex {
+    width: 100%;
+  }
+
+  .menu-container {
+    width: fit-content;
+
+    .menu-item {
+      width: 8vw;
+      max-width: 110px;
+      margin-right: 5%;
+      color: white !important;
+      position: relative;
+
+      a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+nav.show {
+background-color: rgba(10, 10, 10, 1);
+}
+
+nav.transition {
+-webkit-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out;
+-o-transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
+}

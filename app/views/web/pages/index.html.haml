@@ -1,0 +1,73 @@
+#web-pages-index
+  #welcome-section 
+    .bg
+    .bg-overlay
+    .text-container 
+      .image 
+        = image_tag asset_path("dp.jpg")
+      .name-text{style: 'margin-top:10px'}
+        Paul Brian Marcuelo 
+      .reg-text
+        Web Developer &nbsp; ● &nbsp; System Developer &nbsp; ● &nbsp; Mobile Developer
+      .reg-text{style: 'margin-top:20px'} 
+        I'm a freelancer developer based in Bacolod City, Negros Occidental. 
+        %br/
+        I strive to build efficient and beautiful applications through carefully crafted code
+      .social-media.d-flex.justify-content-center 
+        %i.bi.bi-facebook 
+        %i.bi.bi-instagram
+        %i.bi.bi-linkedin  
+  #about-section.d-flex.justify-content-center
+    .image-container.d-flex.justify-content-end
+      = image_tag asset_path("about-image.png")
+    .text-container 
+      %h1 About Me
+      %p.text I am a passionate developer with over 1 year and a half of experience in a small software tech company. Experienced with all stages of the development cycle for dynamic web projects. 
+      %p.text I started to code when I was 16 years old and I am a self-taught developer. Mark Zuckerberg enchanted me to pursue programming and be part of the creators of the digital world.
+      %p.text 
+        %table 
+          %tr 
+            %td Email:
+            %td 
+              %b pb.marcuelo@gmail.com 
+          %tr 
+            %td Age:
+            %td 
+              %b 21
+          %tr 
+            %td Address:
+            %td 
+              %b Bacolod City, Negros Occidental 
+          %tr 
+            %td Nationality:
+            %td 
+              %b Filipino
+  #services-section
+    %h1 Services
+    .d-flex.justify-content-evenly 
+      .card 
+        .card-body 
+          .icon-container 
+            %i.bi.bi-laptop 
+          .h5 Web Development
+          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
+      .card 
+        .card-body 
+          .icon-container 
+            %i.bi.bi-bar-chart-fill 
+          .h5 System Development
+          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
+      .card 
+        .card-body 
+          .icon-container 
+            %i.bi.bi-phone 
+          .h5 Mobile Development
+          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
+  #contact-section 
+    .bg
+    .bg-overlay
+    .card 
+      .card-body 
+        %h1 Let's Build Together
+        %br/
+        
