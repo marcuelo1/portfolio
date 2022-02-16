@@ -39,12 +39,13 @@ nav {
 }
 
 nav.show {
-background-color: rgba(10, 10, 10, 1);
+  background-color: rgba(10, 10, 10, 1);
+  // transition: background-color 1s linear;
 }
 
 nav.transition {
--webkit-transition: all 1s ease-in-out;
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
-transition: all 1s ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
