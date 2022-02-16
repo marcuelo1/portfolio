@@ -49,3 +49,20 @@ nav.transition {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+
+.alert-container {
+  position: fixed !important;
+  background-color: rgba(10, 10, 10, 0);
+  width: 100%;
+  z-index: 99999;
+
+  margin-top: 60px;
+  margin-left: 20px;
+  width: fit-content;
+
+  .alert {
+    div {
+      margin-right: 20px;
+    }
+  }
+}

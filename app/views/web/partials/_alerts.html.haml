@@ -1,0 +1,11 @@
+- if flash[:success].present? || @flash_success.present?
+  .alert.alert-success.alert-dismissible.fade.show{role: 'alert'}
+    %div 
+      = flash[:success].present? ? flash[:success] : @flash_success
+    %button.btn-close.btn-sm{"aria-label" => "Close", "data-bs-dismiss" => "alert", :type => "button"}
+
+- if flash[:error].present? || @flash_error.present?
+  .alert.alert-danger.alert-dismissible.fade.show{role: 'alert'}
+    %div 
+      = flash[:error].present? ? flash[:error] : @flash_error
+    %button.btn-close.btn-sm{"aria-label" => "Close", "data-bs-dismiss" => "alert", :type => "button"}

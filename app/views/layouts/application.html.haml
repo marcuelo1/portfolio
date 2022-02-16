@@ -9,4 +9,6 @@
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
     = render partial: '/web/partials/nav'
+    #alert-container.alert-container
+      = render partial: '/web/partials/alerts'
     = yield

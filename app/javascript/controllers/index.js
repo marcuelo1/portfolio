@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import NavController from "./nav_controller"
 application.register("nav", NavController)
+
+import WebPagesIndexController from "./web/pages/index_controller"
+application.register("web_pages_index", WebPagesIndexController)

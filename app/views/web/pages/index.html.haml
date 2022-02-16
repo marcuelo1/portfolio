@@ -1,4 +1,4 @@
-#web-pages-index
+#web-pages-index{data: {controller: 'web_pages_index'}}
   #welcome-section 
     .bg
     .bg-overlay
@@ -66,8 +66,19 @@
   #contact-section 
     .bg
     .bg-overlay
-    .card 
-      .card-body 
-        %h1 Let's Build Together
-        %br/
+    .d-flex.justify-content-end
+      .card 
+        .card-body 
+          %h1 Let's Build Together
+          = form_with(url: '/inquiries', method: :post) do |f|
+            = f.text_field :name, {class: 'form-control', placeholder: 'Name', "data-web_pages_index-target" => "contactName"}
+
+            = f.text_field :email, {class: 'form-control', placeholder: 'Email', "data-web_pages_index-target" => "contactEmail"}
+
+            = f.text_field :mobile_number, {class: 'form-control', placeholder: 'Phone Number', "data-web_pages_index-target" => "contactMobile"}
+
+            = f.text_area :body, {class: 'form-control', placeholder: 'Share your thoughts', "data-web_pages_index-target" => "contactBody"}
+
+            %center 
+              = f.submit :Send, {class: 'btn btn-dark', data: {action: 'click->web_pages_index#contact_submit'}}
         

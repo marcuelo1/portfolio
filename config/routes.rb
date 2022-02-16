@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   root "web/pages#index"
 
   namespace :web, path: '' do
-    resources :pages, only: [] do
-      collection do
-        
-      end
-    end
+    resources :inquiries, only: [:create]
   end
 end

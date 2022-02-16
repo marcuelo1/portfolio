@@ -177,8 +177,27 @@
       width: fit-content;
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(0, -50%);
+
+      margin-right: 5vw;
+
+      .card-body {
+        h1 {
+          margin-bottom: 20px;
+        }
+
+        input {
+          margin-bottom: 10px;
+        }
+        
+        textarea {
+          margin-top: 10px;
+          margin-bottom: 30px;
+          resize: none;
+
+          height: 150px;
+        }
+      }
     }
   }
 }
