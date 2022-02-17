@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-lg.navbar-dark.transition{data: {controller: 'nav',action: 'scroll@document->nav#nav_scroll'}}
+%nav.navbar.navbar-expand-lg.navbar-dark.transition#nav-bar{data: {controller: 'nav',action: 'scroll@document->nav#nav_scroll'}}
   .d-flex.justify-content-between
     %a.navbar-brand{href: "/"} PAUL BRIAN
     .menu-container.d-flex
@@ -10,3 +10,13 @@
         %a{href: "#services-section"} Services
       .menu-item 
         %a{href: "#contact-section"} Contact
+    %a.navbar-toggler-icon#collapse-navbar-menu-btn{data: {action: "click->nav#nav_collapse"}}
+  .collapse-navbar-menu-container#collapse-navbar-menu-container{"data-nav-collapse-value" => 0}
+    %a{href: "#welcome-section", data: {action: "click->nav#nav_collapse"}}
+      .menu-item Home
+    %a{href: "#about-section", data: {action: "click->nav#nav_collapse"}}
+      .menu-item About
+    %a{href: "#services-section", data: {action: "click->nav#nav_collapse"}} 
+      .menu-item Services
+    %a{href: "#contact-section", data: {action: "click->nav#nav_collapse"}}
+      .menu-item Contact

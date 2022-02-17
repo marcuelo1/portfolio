@@ -3,8 +3,7 @@ nav {
   background-color: rgba(10, 10, 10, 0);
   width: 100%;
   z-index: 99999;
-
-  padding: 5px 3% 5px 3% !important;
+  padding: 0 !important;
 
   .navbar-brand {
     font-weight: bold;
@@ -13,6 +12,7 @@ nav {
 
   .d-flex {
     width: 100%;
+    padding: 5px 3% 5px 3% !important;
   }
 
   .menu-container {
@@ -35,6 +35,15 @@ nav {
         text-decoration: none;
       }
     }
+  }
+
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  .collapse-navbar-menu-container {
+    height: 0;
+    overflow: hidden;
   }
 }
 
@@ -63,6 +72,49 @@ nav.transition {
   .alert {
     div {
       margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  nav {
+    .menu-container {
+      display: none !important;
+    }
+
+    .navbar-toggler-icon {
+      display: block;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+    .collapse-navbar-menu-container {
+      overflow: hidden;
+      transition: all .5s ease-in-out;
+      height: 0;
+
+      width: 100%;
+      background-color: rgba(10, 10, 10, 1);
+
+      a {
+        text-decoration: none;
+
+        .menu-item {
+          width: 100%;
+          color: white !important;
+          font-size: 17px;
+          padding: 5px 3% 10px 3% !important;
+        }
+      }
+
+      .menu-item:hover {
+        background-color: rgba(71, 71, 71, 0.1);
+      }
+
+    }
+
+    .show-collapse {
+      height: 162px
     }
   }
 }
