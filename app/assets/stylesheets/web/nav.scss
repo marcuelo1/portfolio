@@ -12,7 +12,7 @@ nav {
 
   .d-flex {
     width: 100%;
-    padding: 5px 3% 5px 3% !important;
+    padding: 5px 0 5px 3% !important;
   }
 
   .menu-container {
@@ -21,24 +21,28 @@ nav {
     .menu-item {
       width: 8vw;
       max-width: 110px;
-      margin-right: 5%;
       color: white !important;
       position: relative;
 
       a {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        right: 0;
+        transform: translate(0, -50%);
 
         color: white;
         text-decoration: none;
+
+        i {
+          font-size: 20px;
+        }
       }
     }
   }
 
   .navbar-toggler-icon {
     display: none;
+    margin-right: 3%;
   }
 
   .collapse-navbar-menu-container {

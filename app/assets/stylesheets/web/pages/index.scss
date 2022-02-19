@@ -20,6 +20,7 @@
       background-image: url("bg-home.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
     }
 
     .bg-overlay {
@@ -27,7 +28,7 @@
       z-index: -9;
       width: inherit;
       height: inherit;
-      background-color: rgba(0,0,0,0.8)
+      background-color: rgba(0,0,0,0.5)
     }
 
     .text-container  {
@@ -38,7 +39,7 @@
       color: white;
       width: fit-content;
 
-      .reg-text, .name-text {
+      .reg-text, .name-text, .label-text {
         text-align: center;
       }
 
@@ -59,6 +60,15 @@
       .name-text {
         font-size: 40px;
         font-weight: bold;
+      }
+
+      .label-text {
+        font-size: 15px;
+      }
+
+      .reg-text {
+        font-weight: bold;
+        font-style: italic;
       }
 
       .social-media {
@@ -95,6 +105,11 @@
 
       h1 {
         font-weight: bold;
+        text-align: center;
+      }
+
+      .text {
+        text-align: justify;
       }
 
       table {
@@ -209,24 +224,36 @@
   }
 }
 
-@media (min-width: 320px){
-  
-}
-
-@media (min-width: 481px) and (max-width: 640px){
+@media (min-width: 320px) and (max-width: 480px){
   #web-pages-index {
     #welcome-section {
       .text-container {
-        padding: 0 50px;
+        padding: 0 20px;
+
+        .image {
+          width: 120px;
+          height: 120px;
+          margin: auto;
+  
+          img {
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+            border: 5px solid #eaeaea;
+            object-fit: cover;
+          }
+        }
 
         .name-text {
           font-size: 30px;
         }
 
         .reg-text {
-          &:first-child {
-            font-size: 13px;
-          }
+          font-size: 15px;
+        }
+
+        .label-text {
+          font-size: calc(10px + 6 * ((100vw - 320px) / 680));
         }
       }
     }
@@ -267,7 +294,110 @@
     }
 
     #services-section {
-      padding: 15vh 5vw;
+      padding: 70px 5vw;
+  
+      h1 {
+        text-align: center;
+        font-weight: bold;
+      }
+  
+      .d-flex {
+        display: inherit !important;
+  
+        .card {
+          margin: 20px auto;
+  
+          .card-body {
+            padding: 0;
+  
+            .icon-container  {
+              position: relative;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              margin: auto;
+              background-color: #eaeaea;
+  
+              i {
+                font-size: 30px;
+                width: fit-content;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+  
+            .h5 {
+              text-align: center;
+              margin-top: 20px;
+              font-weight: bold;
+            }
+  
+            .text {
+              text-align: center;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px){
+  #web-pages-index {
+    #welcome-section {
+      .text-container {
+        padding: 0 50px;
+
+        .name-text {
+          font-size: 30px;
+        }
+
+        .label-text {
+          font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+        }
+      }
+    }
+
+    #about-section {
+      display: inherit !important;
+      padding-top: 50px;
+
+      .image-container {
+        justify-content: center !important;
+        height: 300px;
+        margin: auto;
+  
+        img {
+          width: auto;
+          height: inherit;
+        }
+      }
+
+      .text-container {
+        margin: auto;
+        padding: 0;
+        padding-top: 20px;
+        width: 80vw;
+
+        h1 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        table {
+          margin: auto;
+        }
+      }
+    }
+
+    #services-section {
+      padding: 70px 5vw;
   
       h1 {
         text-align: center;
@@ -362,7 +492,7 @@
     }
 
     #services-section {
-      padding: 15vh 5vw;
+      padding: 70px 5vw;
   
       h1 {
         text-align: center;

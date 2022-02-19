@@ -45,4 +45,22 @@ export default class extends Controller {
         document.getElementById("alert-container").innerHTML = error['partial']
       })
   }
+
+  close_nav_collapse(){
+    var collapse_menu = document.getElementById("collapse-navbar-menu-container")
+    var nav = document.getElementById("nav-bar")
+    var docEl = document.documentElement
+
+    if(nav.getAttribute("data-nav-collapse-value") == "1"){
+      collapse_menu.classList.remove('show-collapse')
+
+      setTimeout(function() {
+        if (docEl.scrollTop <= nav.clientHeight){
+          nav.classList.remove('show')
+        }
+      }, 490)
+
+      nav.setAttribute("data-nav-collapse-value", 0)
+    }
+  }
 }
