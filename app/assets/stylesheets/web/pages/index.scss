@@ -17,7 +17,7 @@
       z-index: -10;
       width: inherit;
       height: inherit;
-      background-image: url("bg-home.jpg");
+      background-image: url("bg-home.jpeg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -54,6 +54,7 @@
           border-radius: 50%;
           border: 5px solid #eaeaea;
           object-fit: cover;
+          object-position: top;
         }
       }
 
@@ -99,25 +100,63 @@
     }
 
     .text-container {
-      width: 50%;
+      width: 100%;
       height: inherit;
-      padding: 15vh 5vw 20vh 0;
+      padding: 10vh 10vw;
 
       h1 {
-        font-weight: bold;
         text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 20px;
       }
 
-      .text {
-        text-align: justify;
+      .personal-details {
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px;
+        padding: 10px;
+
+        h4 {
+          font-weight: bold;
+        }
+
+        table {
+          tr {
+            height: 40px;
+
+            td:nth-child(1) {
+              width: 125px;
+            }
+          }
+        }
       }
 
-      table {
-        tr {
-          height: 40px;
+      .interests {
+        width: 450px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px;
+        padding: 10px;
 
-          td:nth-child(1) {
-            width: 125px;
+        h4 {
+          font-weight: bold;
+        }
+
+        .interests-content {
+          width: inherit;
+          list-style-type: none;
+
+          li {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin: 10px;
+            
+            img {
+              height: inherit;
+              width: inherit;
+              object-fit: contain;
+            }
           }
         }
       }
@@ -169,7 +208,8 @@
 
           .text {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
+            font-size: 15px;
           }
         }
       }
@@ -259,8 +299,6 @@
     }
 
     #about-section {
-      display: inherit !important;
-      padding-top: 50px;
 
       .image-container {
         justify-content: center !important;
@@ -274,21 +312,33 @@
       }
 
       .text-container {
-        margin: auto;
-        padding: 0;
-        padding-top: 20px;
-        width: 80vw;
+        padding: 5vh 5vw;
 
-        h1 {
-          text-align: center;
+        .text {
+          text-align: justify;
+        }
+        
+        .d-flex {
+          display: inherit !important;
         }
 
-        p {
-          text-align: center;
-        }
-
-        table {
+        .personal-details {
+          width: 100%;
           margin: auto;
+          margin-bottom: 50px;
+
+          h4 {
+            text-align: center;
+          }
+        }
+
+        .interests {
+          width: 100%;
+          margin: auto;
+
+          h4 {
+            text-align: center;
+          }
         }
       }
     }
@@ -362,8 +412,6 @@
     }
 
     #about-section {
-      display: inherit !important;
-      padding-top: 50px;
 
       .image-container {
         justify-content: center !important;
@@ -377,21 +425,29 @@
       }
 
       .text-container {
-        margin: auto;
-        padding: 0;
-        padding-top: 20px;
-        width: 80vw;
-
-        h1 {
-          text-align: center;
+        padding: 5vh 5vw;
+        
+        .d-flex {
+          display: inherit !important;
         }
 
-        p {
-          text-align: center;
-        }
-
-        table {
+        .personal-details {
+          width: 100%;
           margin: auto;
+          margin-bottom: 50px;
+
+          h4 {
+            text-align: center;
+          }
+        }
+
+        .interests {
+          width: 100%;
+          margin: auto;
+
+          h4 {
+            text-align: center;
+          }
         }
       }
     }
@@ -457,8 +513,6 @@
     }
 
     #about-section {
-      display: inherit !important;
-      padding-top: 50px;
 
       .image-container {
         justify-content: center !important;
@@ -472,21 +526,27 @@
       }
 
       .text-container {
-        margin: auto;
-        padding: 0;
-        padding-top: 20px;
-        width: 80vw;
-
-        h1 {
-          text-align: center;
+        padding: 10vh 5vw;
+        
+        .d-flex {
+          display: inherit !important;
         }
 
-        p {
-          text-align: center;
-        }
-
-        table {
+        .personal-details {
           margin: auto;
+          margin-bottom: 50px;
+
+          h4 {
+            text-align: center;
+          }
+        }
+
+        .interests {
+          margin: auto;
+
+          h4 {
+            text-align: center;
+          }
         }
       }
     }
@@ -546,9 +606,6 @@
 @media (min-width: 961px) and (max-width: 1024px){
   #web-pages-index {
     #about-section {
-      display: inherit !important;
-      padding-top: 50px;
-
       .image-container {
         justify-content: center !important;
         height: 300px;
@@ -561,21 +618,11 @@
       }
 
       .text-container {
-        margin: auto;
-        padding: 0;
-        padding-top: 20px;
-        width: 80vw;
+        padding: 10vh 5vw;
 
-        h1 {
-          text-align: center;
-        }
-
-        p {
-          text-align: center;
-        }
-
-        table {
-          margin: auto;
+        .interests {
+          width: 475px;
+          margin-left: 30px;
         }
       }
     }
@@ -599,6 +646,65 @@
           object-fit: fill;
         }
       }
+
+      .text-container {
+        width: 100%;
+        height: inherit;
+        padding: 10vh 5vw;
+
+        h1 {
+          font-weight: bold;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+
+        .personal-details {
+          width: 450px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 15px;
+          padding: 10px;
+
+          h4 {
+            font-weight: bold;
+          }
+
+          table {
+            tr {
+              height: 40px;
+  
+              td:nth-child(1) {
+                width: 125px;
+              }
+            }
+          }
+        }
+
+        .interests {
+          margin-left: 30px;
+
+          h4 {
+            font-weight: bold;
+          }
+
+          .interests-content {
+            width: inherit;
+            list-style-type: none;
+
+            li {
+              width: 90px;
+              height: 90px;
+              float: left;
+              margin: 10px;
+              
+              img {
+                height: inherit;
+                width: inherit;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
     }
 
     #services-section {
@@ -620,7 +726,7 @@
         z-index: -10;
         width: inherit;
         height: inherit;
-        background-image: url("bg-home.jpg");
+        background-image: url("bg-home.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -692,20 +798,62 @@
       }
 
       .text-container {
-        width: 50%;
+        width: 100%;
         height: inherit;
-        padding: 15vh 5vw 20vh 0;
+        padding: 10vh 10vw;
 
         h1 {
           font-weight: bold;
+          margin-bottom: 20px;
+          margin-top: 20px;
         }
 
-        table {
-          tr {
-            height: 40px;
+        .personal-details {
+          width: 450px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 15px;
+          padding: 10px;
 
-            td:nth-child(1) {
-              width: 125px;
+          h4 {
+            font-weight: bold;
+          }
+
+          table {
+            tr {
+              height: 40px;
+  
+              td:nth-child(1) {
+                width: 125px;
+              }
+            }
+          }
+        }
+
+        .interests {
+          width: 450px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 15px;
+          padding: 10px;
+
+          h4 {
+            font-weight: bold;
+          }
+
+          .interests-content {
+            width: inherit;
+            list-style-type: none;
+
+            li {
+              width: 90px;
+              height: 90px;
+              float: left;
+              margin: 10px;
+              
+              img {
+                height: inherit;
+                width: inherit;
+                object-fit: contain;
+              }
             }
           }
         }

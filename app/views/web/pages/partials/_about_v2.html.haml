@@ -1,0 +1,45 @@
+.text-container 
+  %h1 About Me
+  %p.text &emsp;&emsp; I am a passionate developer with over 1 year and a half of experience in a small software tech company. Experienced with all stages of the development cycle for dynamic web projects. I started to code when I was 16 years old and I am a self-taught developer. Mark Zuckerberg enchanted me to pursue programming and be part of the creators of the digital world.
+  %br/
+  .d-flex.justify-content-evenly
+    .personal-details.card
+      .card-body
+        %h4 Personal Details
+        %table 
+          %tr 
+            %td Email:
+            %td 
+              %b pb.marcuelo@gmail.com 
+          %tr 
+            %td Mobile:
+            %td 
+              %b +639053536495
+          %tr 
+            %td Age:
+            %td 
+              %b 21
+          %tr 
+            %td Address:
+            %td 
+              %b Bacolod City, Negros Occidental 
+          %tr 
+            %td Nationality:
+            %td 
+              %b Filipino
+    .interests.card 
+      .card-body
+        %h4 My Profeciency
+        %ul.interests-content 
+          %li
+            = image_tag asset_path("ruby.png")
+          %li
+            = image_tag asset_path("js.png")
+          %li
+            = image_tag asset_path("html.png")
+          %li
+            = image_tag asset_path("css.png")
+          %li
+            = image_tag asset_path("flutter.png")
+
+          

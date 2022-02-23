@@ -8,8 +8,10 @@
         %a{href: "#about-section"} About
       .menu-item 
         %a{href: "#services-section"} Services
-      .menu-item 
-        %a{href: "#contact-section"} Contact
+      -# .menu-item 
+      -#   %a{href: "#projects-section"} Projects
+      -# .menu-item 
+      -#   %a{href: "#contact-section"} Contact
       .menu-item 
         %a{href: "https://www.linkedin.com/in/paul-brian-marcuelo-2a43a6232/", target: '_blank'}
           %i.bi.bi-linkedin 
@@ -21,5 +23,7 @@
       .menu-item About
     %a{href: "#services-section", data: {action: "click->nav#nav_collapse"}} 
       .menu-item Services
-    %a{href: "#contact-section", data: {action: "click->nav#nav_collapse"}}
-      .menu-item Contact
+    -# %a{href: "#project-section", data: {action: "click->nav#nav_collapse"}}
+    -#   .menu-item Projects
+    -# %a{href: "#contact-section", data: {action: "click->nav#nav_collapse"}}
+    -#   .menu-item Contact

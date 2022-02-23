@@ -4,7 +4,7 @@
     .bg-overlay
     .text-container 
       .image 
-        = image_tag asset_path("dp.jpg")
+        = image_tag asset_path("dp.JPG")
       .name-text{style: 'margin-top:10px'}
         Paul Brian Marcuelo 
       .label-text
@@ -17,31 +17,8 @@
       -#   %i.bi.bi-facebook 
       -#   %i.bi.bi-instagram
       -#   %i.bi.bi-linkedin  
-  #about-section.d-flex.justify-content-center
-    .image-container.d-flex.justify-content-end
-      = image_tag asset_path("about-image.png")
-    .text-container 
-      %h1 About Me
-      %p.text &emsp;&emsp; I am a passionate developer with over 1 year and a half of experience in a small software tech company. Experienced with all stages of the development cycle for dynamic web projects. 
-      %p.text &emsp;&emsp; I started to code when I was 16 years old and I am a self-taught developer. Mark Zuckerberg enchanted me to pursue programming and be part of the creators of the digital world.
-      %p.text 
-        %table 
-          %tr 
-            %td Email:
-            %td 
-              %b pb.marcuelo@gmail.com 
-          %tr 
-            %td Age:
-            %td 
-              %b 21
-          %tr 
-            %td Address:
-            %td 
-              %b Bacolod City, Negros Occidental 
-          %tr 
-            %td Nationality:
-            %td 
-              %b Filipino
+  #about-section
+    = render partial: '/web/pages/partials/about_v2'
   #services-section
     %h1 Services
     .d-flex.justify-content-evenly 
@@ -50,35 +27,51 @@
           .icon-container 
             %i.bi.bi-laptop 
           .h5 Web Development
-          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
+          .text 
+            Creation of 
+            %b Dynamic
+            and 
+            %b Fully Responsive 
+            Websites ranging from Personal to Commercial Use. Integrated with database using PostgreSQL.
       .card 
         .card-body 
           .icon-container 
-            %i.bi.bi-bar-chart-fill 
-          .h5 System Development
-          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
+            %i.bi.bi-gear
+          .h5 API Development
+          .text Building Backend APIs that will support Frontend Applications. Integrated with database using PostgreSQL.
       .card 
         .card-body 
           .icon-container 
             %i.bi.bi-phone 
           .h5 Mobile Development
-          .text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur in impedit similique quos cumque. Repudiandae minima quod voluptatibus hic fugit.
-  #contact-section 
-    .bg
-    .bg-overlay
-    .d-flex.justify-content-end
-      .card 
-        .card-body 
-          %h1 Let's Build Together
-          = form_with(url: '/inquiries', method: :post) do |f|
-            = f.text_field :name, {class: 'form-control', placeholder: 'Name', "data-web_pages_index-target" => "contactName"}
+          .text 
+            Building
+            %b Dynamic 
+            and 
+            %b Fully Responsive
+            Mobile Applications supported with Backend APIs and with PostgreSQL database for both 
+            %b IoS 
+            and 
+            %b Android
+            platforms.
+#projects-section 
+-# #contact-section 
+-#   .bg
+-#   .bg-overlay
+-#   .d-flex.justify-content-end
+-#     .card 
+-#       .card-body 
+-#         %h1 Let's Build Together
+-#         = form_with(url: '/inquiries',
+  method: :post) do |f|
+-#           = f.text_field :name, {class: 'form-control', placeholder: 'Name', "data-web_pages_index-target" => "contactName"}
 
-            = f.text_field :email, {class: 'form-control', placeholder: 'Email', "data-web_pages_index-target" => "contactEmail"}
+-#           = f.text_field :email, {class: 'form-control', placeholder: 'Email', "data-web_pages_index-target" => "contactEmail"}
 
-            = f.text_field :mobile_number, {class: 'form-control', placeholder: 'Phone Number', "data-web_pages_index-target" => "contactMobile"}
+-#           = f.text_field :mobile_number, {class: 'form-control', placeholder: 'Phone Number', "data-web_pages_index-target" => "contactMobile"}
 
-            = f.text_area :body, {class: 'form-control', placeholder: 'Share your thoughts', "data-web_pages_index-target" => "contactBody"}
+-#           = f.text_area :body, {class: 'form-control', placeholder: 'Share your thoughts', "data-web_pages_index-target" => "contactBody"}
 
-            %center 
-              = f.submit :Send, {class: 'btn btn-dark', data: {action: 'click->web_pages_index#contact_submit'}}
+-#           %center 
+-#             = f.submit :Send, {class: 'btn btn-dark', data: {action: 'click->web_pages_index#contact_submit'}}
         
