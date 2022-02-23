@@ -275,6 +275,8 @@
       .project-list  {
         width: 80vw;
         margin: auto;
+        padding: 0;
+        height: 10px;
         
         .card {
           float: left;
@@ -455,6 +457,14 @@
         }
       }
     }
+
+    #projects-section {
+      .projects-container {
+        .project-list  {
+          width: 340px;
+        }
+      }
+    }
   }
 }
 
@@ -564,6 +574,14 @@
         }
       }
     }
+
+    #projects-section {
+      .projects-container {
+        .project-list  {
+          width: 340px;
+        }
+      }
+    }
   }
 }
 
@@ -663,6 +681,14 @@
         }
       }
     }
+
+    #projects-section {
+      .projects-container {
+        .project-list  {
+          width: 340px;
+        }
+      }
+    }
   }
 }
 
@@ -694,6 +720,14 @@
       .d-flex {
         .card {
           width: 250px;
+        }
+      }
+    }
+
+    #projects-section {
+      .projects-container {
+        .project-list  {
+          width: 683px;
         }
       }
     }
@@ -774,6 +808,14 @@
       .d-flex {
         .card {
           width: 280px;
+        }
+      }
+    }
+
+    #projects-section {
+      .projects-container {
+        .project-list  {
+          width: 687px;
         }
       }
     }
@@ -1017,6 +1059,70 @@
             resize: none;
 
             height: 150px;
+          }
+        }
+      }
+    }
+
+    #projects-section {
+      padding: 10vh 5vw;
+  
+      h1 {
+        text-align: center;
+      }
+  
+      .projects-container {
+        .project-list  {
+          width: 1025px;
+          margin: auto;
+          padding: 0;
+          height: 10px;
+          
+          .card {
+            float: left;
+            width: 300px;
+            height: 450px;
+            margin: 20px;
+            box-shadow: 5px 5px 15px;
+  
+            .name {
+              font-size: 20px;
+              font-weight: bold;
+              text-align: center;
+            }
+  
+            .category {
+              width: fit-content;
+              margin: auto;
+              font-size: 15px;
+              font-weight: bold;
+            }
+  
+            .link {
+              width: fit-content;
+              margin: auto;
+              margin-bottom: 30px;
+              font-size: 12px;
+              
+              a {
+                font-size: 12px;
+                text-decoration: none;
+              }
+            }
+  
+            .about {
+              margin-bottom: 30px;
+              text-align: center;
+            }
+  
+            .job-description {
+              .label {
+                // font-size: 15px;
+                font-weight: bold;
+                width: fit-content;
+                margin: auto;
+              }
+            }
           }
         }
       }
