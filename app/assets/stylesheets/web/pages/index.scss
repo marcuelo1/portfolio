@@ -5,7 +5,7 @@
     width: 100%;
   }
 
-  #about-section, #services-section {
+  #about-section, #services-section, #projects-section {
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -258,6 +258,68 @@
           resize: none;
 
           height: 150px;
+        }
+      }
+    }
+  }
+
+  #projects-section {
+    padding: 10vh 5vw;
+
+    h1 {
+      text-align: center;
+    }
+
+    .projects-container {
+      .project-list  {
+        width: 80vw;
+        margin: auto;
+        
+        .card {
+          float: left;
+          width: 300px;
+          height: 450px;
+          margin: 20px;
+          box-shadow: 5px 5px 15px;
+
+          .name {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .category {
+            width: fit-content;
+            margin: auto;
+            font-size: 15px;
+            font-weight: bold;
+          }
+
+          .link {
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 30px;
+            font-size: 12px;
+            
+            a {
+              font-size: 12px;
+              text-decoration: none;
+            }
+          }
+
+          .about {
+            margin-bottom: 30px;
+            text-align: center;
+          }
+
+          .job-description {
+            .label {
+              // font-size: 15px;
+              font-weight: bold;
+              width: fit-content;
+              margin: auto;
+            }
+          }
         }
       }
     }
